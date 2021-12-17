@@ -1,0 +1,46 @@
+﻿<Window x:Class="PracticalWork_7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticalWork_7"
+        mc:Ignorable="d"
+         Title="Практические работы №7" Height="276" Width="542" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,0,1">
+        <Menu VerticalAlignment="Top" Height="26" >
+            <MenuItem Header="Опции" Width="65" >
+                <MenuItem Header="Изменить параметры" Click="ChangeParameters_Click" />
+                <MenuItem Header="Сравнение" Click="Comparison_Click" />
+            </MenuItem>
+            <Separator Width="281" Height="16">
+            </Separator>
+            <MenuItem Header="О программе" Click="Info_Click" ></MenuItem>
+            <MenuItem Header="Выход" Click="Exit_Click"></MenuItem>
+        </Menu>
+        <TextBox x:Name="parameterOutput" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="188" IsReadOnly="True" Text="Торговая марка - не указана&#xA;Мощность - 0 л.с. &#xA;Колличество цилиндров - 0&#xA; &#xA;Торговая марка - не указана&#xA;Мощность - 0 л.с.&#xA;Колличество цилиндров - 0"  />
+        <TextBlock HorizontalAlignment="Left" Margin="211,51,0,0" Text="Параметры:" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBox  x:Name="tredemark" HorizontalAlignment="Left" Margin="290,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Height="21"/>
+        <TextBlock HorizontalAlignment="Left" Margin="211,72,0,0" Text="Торговая марка" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.076,0.378" Height="35" Width="66" />
+        <TextBlock HorizontalAlignment="Left" Margin="211,112,0,0" Text="Мощность" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBox x:Name="power" HorizontalAlignment="Left" Margin="290,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.5,0.5" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" Margin="211,137,0,0" Text="Колличество цилиндров" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" />
+        <TextBox x:Name="numberCylinders" HorizontalAlignment="Left" Margin="290,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" />
+        <TextBox x:Name="numberCarryingBody" HorizontalAlignment="Left" Margin="323,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
+        <Button x:Name="ChangeParameters" Content="Изменить параметры" HorizontalAlignment="Left" Margin="373,202,0,0" VerticalAlignment="Top"  Width="132" Click="ChangeParameters_Click" Height="22"/>
+        <Button x:Name="increment" Content="Прибавить л.с." HorizontalAlignment="Left" Margin="400,112,0,0" VerticalAlignment="Top"  Height="22" Click="IncreasePower_Click" Width="90"/>
+        <Button x:Name="Compare" Content="Сравнить уровень крутости" HorizontalAlignment="Left" Margin="211,202,0,0" VerticalAlignment="Top"  Width="157" Height="22" Click="Comparison_Click"/>
+        <RadioButton x:Name="firstCar" Content="Первый автомобиль" HorizontalAlignment="Left" Margin="211,31,0,0" VerticalAlignment="Top" Checked="FirstCar_Checked" IsChecked="True"/>
+        <RadioButton x:Name="secondCar" Content="Второй автомобиль" HorizontalAlignment="Left" Margin="363,34,0,0" VerticalAlignment="Top" Checked="SecondCar_Checked"/>
+        <TextBlock HorizontalAlignment="Left" Margin="211,178,0,0" Text="Грузоподъемность" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Переназначить" HorizontalAlignment="Left" Margin="400,75,0,0" VerticalAlignment="Top" Width="90" Height="22" Click="Reassign_Click"/>
+    </Grid>
+</Window>
